@@ -27,13 +27,13 @@
             <ImageView
                 android:layout_width="49dp"
                 android:layout_height="49dp"
-                android:src="@drawable/icon" />
+                android:src="@drawable/tuling" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="小慕"
+                android:text="echo"
                 android:textSize="18sp" >
             </TextView>
         </LinearLayout>
@@ -44,8 +44,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/chatfrom_bg_normal"
             android:gravity="center_vertical"
-            android:textSize="16sp"
-            android:text="你好" />
+            android:text="你好,很高兴为你服务！"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </LinearLayout>
