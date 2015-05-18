@@ -1,5 +1,6 @@
 package com.echo.bean;
 
+//映射服务器返回的结果
 public class Result
 {
 	private int code;

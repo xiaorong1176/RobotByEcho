@@ -6,10 +6,10 @@ public class ChatMessage
 {
 	private String name;
 	private String msg;
-	private Type type;
-	private Date date;
+	private Type type;//发送消息或者接收消息
+	private Date date;//时间
 
-	public enum Type
+	public enum Type//枚举
 	{
 		INCOMING, OUTCOMING
 	}

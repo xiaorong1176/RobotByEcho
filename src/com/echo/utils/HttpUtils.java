@@ -25,11 +25,15 @@ public class HttpUtils
 	 * @param msg
 	 * @return
 	 */
+	//把工具类加强为一个返回一个ChatMessage消息
+	//第三方jar Gson，将字符串转换成对象
 	public static ChatMessage sendMessage(String msg)
 	{
 		ChatMessage chatMessage = new ChatMessage();
+		//用户发送消息给服务器，得到一个返回结果（json字符串的结果），然后转换为ChatMessage的结果
 		String jsonRes = doGet(msg);
 		Gson gson = new Gson();
+		//result进行接收 转换为result对象
 		Result result = null;
 		try
 		{
