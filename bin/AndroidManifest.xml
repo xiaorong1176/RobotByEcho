@@ -30,7 +30,7 @@
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:label="this is a test "
-        android:targetPackage="com.echo.robat" >
+        android:targetPackage="com.echo.robatbyecho" >
     </instrumentation>
 
 </manifest>

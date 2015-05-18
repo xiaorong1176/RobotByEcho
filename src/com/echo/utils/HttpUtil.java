@@ -3,8 +3,10 @@ package com.echo.utils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URLEncoder;
 
 public class HttpUtil {
 	private static final String URL = "";
@@ -68,7 +70,12 @@ public class HttpUtil {
 	private static String setParams(String msg) {
 		// TODO Auto-generated method stub
 		String url = "";
-		url = URL + "?key" + API_KEY + "&info" + msg;
+		try {
+			url = URL + "?key" + API_KEY + "&info" + URLEncoder.encode(msg, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
 		
 		return url;
 	}
