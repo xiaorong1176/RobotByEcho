@@ -5,11 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.security.PublicKey;
-
-import org.apache.http.HttpConnection;
-
-import android.database.CursorJoiner.Result;
 
 public class HttpUtil {
 	private static final String URL = "";
@@ -19,13 +14,6 @@ public class HttpUtil {
 	public static String doGet(String msg){
 		String result = "";
 		String url = setParams(msg);
-		return result;
-	}
-
-	private static String setParams(String msg) {
-		// TODO Auto-generated method stub
-		String url = "";
-		url = URL + "?key" + API_KEY + "&info" + msg;
 		InputStream is = null;
 		ByteArrayOutputStream baos = null;
 		try {
@@ -46,7 +34,7 @@ public class HttpUtil {
 				 baos.write(buf, 0, len);
 			 }
 			 baos.flush();
-			 String result = new String(baos.toByteArray());
+			 result = new String(baos.toByteArray());
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -74,6 +62,14 @@ public class HttpUtil {
 					e.printStackTrace();
 				}
 			}
+		return result;
+	}
+
+	private static String setParams(String msg) {
+		// TODO Auto-generated method stub
+		String url = "";
+		url = URL + "?key" + API_KEY + "&info" + msg;
+		
 		return url;
 	}
 

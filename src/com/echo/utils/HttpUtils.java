@@ -58,7 +58,7 @@ public class HttpUtils
 			conn.setReadTimeout(5 * 1000);
 			conn.setConnectTimeout(5 * 1000);
 			conn.setRequestMethod("GET");
-			is = conn.getInputStream();
+			is = conn.getInputStream();  //Í¨¹ýGETÄÃµ½InputStream
 			int len = -1;
 			byte[] buf = new byte[128];
 			baos = new ByteArrayOutputStream();
