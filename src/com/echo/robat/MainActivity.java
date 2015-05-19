@@ -3,12 +3,11 @@ package com.echo.robat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import com.echo.bean.ChatMessage;
 import com.echo.bean.ChatMessage.Type;
 import com.echo.robatbyecho.R;
 import com.echo.utils.HttpUtils;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+@SuppressLint("HandlerLeak")
 public class MainActivity extends Activity {
 	
 	//一般ListView需要绑定一个适配器，适配器需要绑定一个数据源
@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
 	private void initDatas() {
 		// TODO Auto-generated method stub
 		mDatas = new ArrayList<ChatMessage>();
-		mDatas.add(new ChatMessage("你好，小慕为您服务", Type.INCOMING, new Date()));
+		mDatas.add(new ChatMessage("你好，图灵为您服务", Type.INCOMING, new Date()));
 		mAdapter = new ChatMessageAdapter(this, mDatas);
 		mMsgs.setAdapter(mAdapter);
 	}

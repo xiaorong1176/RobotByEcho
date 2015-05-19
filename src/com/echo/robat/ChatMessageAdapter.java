@@ -22,10 +22,12 @@ public class ChatMessageAdapter extends BaseAdapter {
 	
 	public ChatMessageAdapter(Context context, List<ChatMessage> mDatas)
 	{
+		//LayoutInflater初始化
 		mInflater = LayoutInflater.from(context);
 		this.mDatas = mDatas;
 	}
 
+	//返回消息个数
 	public int getCount() {
 		// TODO Auto-generated method stub
 		return mDatas.size();
